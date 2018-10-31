@@ -1,7 +1,19 @@
 .contactData {
-    margin: 70px auto;
+    margin: 7px auto;
     width: 80%;
     text-align: center;
-
     padding: 3px;
+  }
+  .ImageMovie{
+      width: 50%;
+      margin: auth;
+  }
+  .btnMovie{
+      color: blue;
+      background-color: transparent;
+      border-radius: 10%;
+      margin-top: 7px;
+  }
+  .btnMovie:hover{
+      cursor: pointer;
   }

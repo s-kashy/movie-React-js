@@ -9,8 +9,11 @@
     z-index: 90;
     background: salmon;
   }
-  
+  a{
+    color: black;
+  }
   p {
+    color: black;
     margin: 15px;
   }
   @media screen and (max-width: 650px) {

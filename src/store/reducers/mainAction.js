@@ -13,19 +13,15 @@ const initialState = {
 const reducer = (state = initialState, action) => {
 
     switch (action.type) {
-
-
         case actionType.GET_ALL_MOVIES:
-
             return updateObject(state, {
                 listOfMovie: action.data
             });
         case actionType.CLOSE_MODEL:
-            return updateObject(state, { openModelOurClose: false })
+            return updateObject(state, { openModelOurClose: false ,chosenMovie:null })
 
         case actionType.OPEN_MODEL:
             return updateObject(state, { openModelOurClose: true })
-
             case actionType.GET_SINGEL_MOVIE:
             return updateObject(state,{chosenMovie:action.data,openModelOurClose:true})
            case  actionType.CLOSE_VIEW_MOVIE:

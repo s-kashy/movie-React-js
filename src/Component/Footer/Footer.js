@@ -9,7 +9,7 @@ const Footer = () => {
         <div className={classes.Footer}>
             <p> Created by Shlomo Kashy  </p>
             <p>
-               Dont forget To Add Link To Repo
+            <a href="https://github.com/s-kashy/restart-project">Repo GitHub</a>
             </p>
             <p>
                 <a href="mailto:shlomo.kashy@gmail.com">shlomo.kashy@gmail.com</a>

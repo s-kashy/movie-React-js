@@ -2,7 +2,6 @@ import React, { Component } from "react"
 import classes from "./Layout.css"
 import Model from "../Model/Model"
 
-import * as actionItem from "../../store/actions/index";
 import PresentMovie from "../PresentMovie/PresentMovie"
 import { connect } from "react-redux";
 class Layout extends Component {
@@ -23,12 +22,12 @@ const mapStateToProps = state => {
 
     };
 };
-const mapStateDispatchToProps = dispatch => {
-    return {
+// const mapStateDispatchToProps = dispatch => {
+//     return {
 
-    };
-};
+//     };
+// };
 export default connect(
-    mapStateToProps,
-    mapStateDispatchToProps
+    mapStateToProps
+   
 )(Layout);

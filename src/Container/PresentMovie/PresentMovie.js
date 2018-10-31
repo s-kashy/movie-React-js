@@ -11,6 +11,7 @@ class PresentMovie extends Component {
     }
 
     render() {
+        console.log("chosenMovie",this.props.chosenMovie)
         return (
             <div className={classes.contactData}>
                 <Card>
@@ -19,11 +20,11 @@ class PresentMovie extends Component {
                             <CardTitle>{this.props.chosenMovie.description}</CardTitle> :
                             <CardTitle>Data Wasn't Available</CardTitle>}
 
-                        {this.props.chosenMovie.imageUrl ? <CardImg src={this.props.imageUrl} /> : <CardText>Image Not Available</CardText>}
+                        {this.props.chosenMovie.imageUrl ? <CardImg className={classes.ImageMovie} src={this.props.chosenMovie.imageUrl} /> : <CardText>Image Not Available</CardText>}
 
                     </CardBody>
-                    <Button onClick={this.closeViewHandler}>Close-View</Button>
-                </Card>
+                    <Button className={classes.btnMovie} onClick={this.closeViewHandler}>Close-View</Button>
+                </Card> 
 
             </div>
         )
