@@ -42,8 +42,9 @@ export const chosenMovie=(chosenMovie)=>{
     }
 }
 export const getSingelMovie = (id) => {
+  console.log("id",id)
     return dispatch => {
-        axios.get(`http://x-mode.co.il/exam/descriptionMovies/${id}.txt`).then((res) => {
+        axios.get("http://x-mode.co.il/exam/descriptionMovies/"+id+".txt").then((res) => {
             console.log("res movie", res)
             const movieChosen={
                 description: res.data.description,

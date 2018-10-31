@@ -9,7 +9,7 @@ import QueryContainer from "../../Component/QueryContainer/QueryContainer"
 
 function searchFor(term) {
     return function (x) {
-        console.log("x",x)
+       
         return x.name.toLowerCase().includes(term.toLowerCase()) || !term
     }
 }
@@ -25,12 +25,12 @@ class LandingPage extends Component {
 
     }
 
-    clickOnMovie = (event) => {
-        this.props.loadMovie(event.target.id)
+    clickOnMovie = (id) => {
+        
+        this.props.loadMovie(id)
     }
     changeHandler = (event) => {
         this.setState({ term: event.target.value })
-
 
 
 
@@ -46,7 +46,7 @@ class LandingPage extends Component {
                     name={movie.name}
                     id={movie.id}
                     year={movie.year}
-                    clicked={this.clickOnMovie}
+                    clicked={()=>this.clickOnMovie(movie.id)}
                     category={movie.category} />)
             })
         }
@@ -77,12 +77,3 @@ export default connect(
     mapStateDispatchToProps
 )(LandingPage);
 
-
-
-// return (<Movie
-//     key={movie.id}
-//     name={movie.name}
-//     id={movie.id}
-//     year={movie.year}
-//     clicked={this.clickOnMovie}
-//     category={movie.category} />)
